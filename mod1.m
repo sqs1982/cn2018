@@ -1,5 +1,5 @@
 function k=mod1(x,y)
-k1=mod(x,y);%ว๓ำเสý
+k1=mod(x,y);%รรณร“ร รรฝ
 b=find(k1==0);
 if ~isempty(b)
 k=k1;

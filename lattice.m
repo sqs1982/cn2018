@@ -1,6 +1,6 @@
 function lattice=gzwl(N,K)
-N=input('ÊäÈë½Úµã×ÜÊıN£º');
-K=input('ÊäÈëÃ¿¸ö½ÚµãÁÚ¾ÓÊıK£º');
+N=input('è¾“å…¥èŠ‚ç‚¹æ€»æ•°Nï¼š');
+K=input('è¾“å…¥æ¯ä¸ªèŠ‚ç‚¹é‚»å±…æ•°Kï¼š');
 angle=0:2*pi/N:2*pi-2*pi/N;
 x=100*sin(angle);
 y=100*cos(angle);

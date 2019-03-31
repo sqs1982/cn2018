@@ -1,41 +1,5 @@
 function out = randint(varargin)
-%
-%
-%WARNING: This is an obsolete function and may be removed in the future.
-%         Please use RANDI instead.
-%
-%
-%RANDINT Generate matrix of uniformly distributed random integers.
-%   OUT = RANDINT generates a "0" or "1" with equal probability.
-%
-%   OUT = RANDINT(M) generates an M-by-M matrix of random binary numbers.
-%   "0" and "1" occur with equal probability.
-%
-%   OUT = RANDINT(M,N) generates an M-by-N matrix of random binary numbers.
-%   "0" and "1" occur with equal probability.
-%
-%   OUT = RANDINT(M,N,IRANGE) generates an M-by-N matrix of random integers.
-%
-%   IRANGE can be either a scalar or a two-element vector:
-%   Scalar : If IRANGE is a positive integer, then the output integer
-%            range is [0, IRANGE-1].  If IRANGE is a negative integer,
-%            then the output integer range is [IRANGE+1, 0].
-%   Vector : If IRANGE is a two-element vector, then the output
-%            integer range is [IRANGE(1), IRANGE(2)].
-%
-%   OUT = RANDINT(M,N,IRANGE,STATE) causes RAND to use the generator
-%   determined by the 'state' method, and initializes the state of that
-%   generator using the value of STATE.
-%
-%   Examples:
-%       r1 = randint(2,3)                 
-%       r2 = randint(2,3,4)
-%       r3 = randint(2,3,-4)              
-%       r4 = randint(2,3,[-2 2])
-%
-%   See also RAND, RANDSRC, RANDERR.
 
-%   Copyright 1996-2012 The MathWorks, Inc.
 
 warning(message('comm:system:warnobsolete:obsoleteReplace', 'RANDI'));
 

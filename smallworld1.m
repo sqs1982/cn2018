@@ -1,11 +1,11 @@
-function [Nodes]=smallworld1(N,m,p) %N£ºÍøÂç½ÚµãÊı m£ºµãµÄ±ßÊı/2  p:¶Ï¼üÖØÁ¬ÂÊ,%Ô­Ê¼º¯Êı[Nodes,Cii]=smallworld1(N,m,p)
+function [Nodes]=smallworld1(N,m,p) %Nï¼šç½‘ç»œèŠ‚ç‚¹æ•° mï¼šç‚¹çš„è¾¹æ•°/2  p:æ–­é”®é‡è¿ç‡,%åŸå§‹å‡½æ•°[Nodes,Cii]=smallworld1(N,m,p)
 N=100;m=6;p=0.4;
-Nodes=sparse([]);   %È«²¿Îª0
+Nodes=sparse([]);   %å…¨éƒ¨ä¸º0
 
 for i=1:N      
-        k1=[i:i+m,i-m:i-1];%½Úµãi×óÓÒÏàÁÚµÄm¸ö½Úµã£¬
-        kk=mod1(k1,N);%È¡Óà
-        Nodes(i,kk)=1;   %¶ÔÏàÁÚ2m¸ö½ÚµãºÍ½ÚµãiÖ®¼äµÄÁ¬½Ó¸³Öµ£¬Èç¹û²»ºÍ×Ô¼ºÁªÏµ£¬k1=[i+1:i+m,i-m:i-1];
+        k1=[i:i+m,i-m:i-1];%èŠ‚ç‚¹iå·¦å³ç›¸é‚»çš„mä¸ªèŠ‚ç‚¹ï¼Œ
+        kk=mod1(k1,N);%å–ä½™
+        Nodes(i,kk)=1;   %å¯¹ç›¸é‚»2mä¸ªèŠ‚ç‚¹å’ŒèŠ‚ç‚¹iä¹‹é—´çš„è¿æ¥èµ‹å€¼ï¼Œå¦‚æœä¸å’Œè‡ªå·±è”ç³»ï¼Œk1=[i+1:i+m,i-m:i-1];
 end
 
 for i=1:N
@@ -14,7 +14,7 @@ for i=1:N
     for j=j1
         r=rand(1);
         if r<=p
-             unconnect=find(Nodes(i,:)==0);%ÕÒµ½Ã»ÓĞºÍ½ÚµãiÁ¬½ÓµÄ½ÚµãÎ»ÖÃ£¬¾ØÕónodesµÚiĞĞµÄÖµÓë0±È½Ï£¬Èç¹ûÎª0 £¬find·µ»Ø0µÄÎ»ÖÃ
+             unconnect=find(Nodes(i,:)==0);%æ‰¾åˆ°æ²¡æœ‰å’ŒèŠ‚ç‚¹iè¿æ¥çš„èŠ‚ç‚¹ä½ç½®ï¼ŒçŸ©é˜µnodesç¬¬iè¡Œçš„å€¼ä¸0æ¯”è¾ƒï¼Œå¦‚æœä¸º0 ï¼Œfindè¿”å›0çš„ä½ç½®
             r1=ceil((length(unconnect))*rand(1));
             Nodes(i,unconnect(r1))=1;
             Nodes(unconnect(r1),i)=1;
@@ -38,7 +38,3 @@ for i=1:N
         end
     end
 end
-
-
-
- 
